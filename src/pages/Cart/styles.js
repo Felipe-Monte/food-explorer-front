@@ -44,13 +44,10 @@ export const Content = styled.div`
     .total {
         margin: 20px auto 60px;
         line-height: 64px;
-        font-size: 2rem;
+        font-size: 2.5rem;
         width: 180px;
         height: 64px;
         border-radius: 10px;
-
-        border: 1px solid white;
-        background-color: ${({ theme }) => theme.COLORS.BLUE_300};
     }
 
     @media only screen and (min-width: 768px) {
@@ -142,6 +139,10 @@ export const PaymentCard = styled.div`
         align-self: center;
         align-items: center;
         align-content: center;
+
+        .finishPaymentButton {
+            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+        }
         
         /* ==== CreditCard Screen ==== */
         .validTo {

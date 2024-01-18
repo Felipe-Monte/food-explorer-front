@@ -51,12 +51,9 @@ export const Table = styled.div`
         max-height: 54.4rem;
         margin-top: 3.5rem;
         
-        border: 2px solid ${({ theme }) => theme.COLORS.BLUE_300};
+        border: 2px solid ${({ theme }) => theme.COLORS.WHITE_100};
         border-radius: 0.8rem;
         border-collapse: collapse;
-
-        -webkit-box-shadow: 0px 0px 10px 5px #193746; 
-        box-shadow: 0px 0px 10px 5px #193746;
     }
 
     table * {

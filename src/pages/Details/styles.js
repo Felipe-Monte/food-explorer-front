@@ -19,6 +19,10 @@ export const Content = styled.div`
     margin: auto;
     padding: 3.5rem 4rem;
 
+    .button_back {
+        color: ${({theme}) => theme.COLORS.WHITE};
+    }
+
     button:first-child {
         font-size: 2.4rem;
         font-weight: 500;
@@ -34,7 +38,7 @@ export const Content = styled.div`
         margin: 2rem 0 2rem;
         font-size: 3.2rem;
         line-height: 5.12rem;
-        color: ${({ theme }) => theme.COLORS.BLUE};
+        color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
     .content {
@@ -148,6 +152,11 @@ export const PurchaseCard = styled.div`
         height: 5.6rem;
         max-width: 24.6rem;
         white-space: nowrap;
+        color: ${({theme}) => theme.COLORS.WHITE};
+    }
+
+    .button_add {
+        background-color: ${({theme}) => theme.COLORS.BACKGROUND_700};
     }
 
     .counter {

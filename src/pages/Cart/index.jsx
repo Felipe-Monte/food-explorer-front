@@ -183,7 +183,7 @@ export function Cart() {
 
                             <Content>
 
-                                <ThemeSlider theme={theme} toggleTheme={toggleTheme}/>
+                                {/* <ThemeSlider theme={theme} toggleTheme={toggleTheme}/> */}
 
                                 <div className="card-wrapper">
                                 

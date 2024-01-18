@@ -57,7 +57,7 @@ export const Image = styled.div`
         height: 18.6rem;
         border-radius: 50%;
         object-fit: cover;
-        border: 2px solid ${({ theme }) => theme.COLORS.BLUE};
+        border: 2px solid ${({ theme }) => theme.COLORS.WHITE};
     }
     
     > label {
@@ -74,7 +74,7 @@ export const Image = styled.div`
         
         background-color: ${({ theme }) => theme.COLORS.BLUE_500};
         border-radius: 50%;
-        border: 3px solid ${({ theme }) => theme.COLORS.BLUE};
+        border: 3px solid ${({ theme }) => theme.COLORS.WHITE};
 
         cursor: pointer;
 
@@ -85,13 +85,13 @@ export const Image = styled.div`
         svg {
             width: 2rem;
             height: 2rem;
-            color: ${({ theme }) => theme.COLORS.BLUE};
+            color: ${({ theme }) => theme.COLORS.WHITE};
         }
     }
 
-    > label:hover {
+    /* > label:hover {
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-    }
+    } */
 `;
 
 export const Form = styled.form`

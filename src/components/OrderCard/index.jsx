@@ -18,6 +18,7 @@ export function OrderCard({data}) {
                     <ButtonText 
                         title="Excluir"
                         onClick={() => handleRemoveDishFromCart(data.id)}
+                        className="btn_color"
                     />
                 </div>
                 

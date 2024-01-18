@@ -10,12 +10,12 @@ import logo from '../../assets/logo.svg';
 
 import { useCart } from '../../hooks/cart';
 
-export function Header({search, favoritesFilter}) {
+export function Header({ search, favoritesFilter }) {
     const { user } = useAuth()
     const { signOut } = useAuth();
 
     const { cart, orders } = useCart();
-    
+
     function mobileMenu() {
         document.getElementById('hamburger').classList.toggle('active')
         document.getElementById('nav-menu').classList.toggle('active')
@@ -47,11 +47,11 @@ export function Header({search, favoritesFilter}) {
 
                     <Search>
                         <label>
-                            <FiSearch size={24}/>
-                            <input 
-                                type="text" 
+                            <FiSearch size={24} />
+                            <input
+                                type="text"
                                 placeholder="Busque pelas opções de pratos"
-                                onChange={e => {search(e.target.value)}}
+                                onChange={e => { search(e.target.value) }}
                             />
                         </label>
                     </Search>
@@ -63,18 +63,18 @@ export function Header({search, favoritesFilter}) {
                                 <Button
                                     type='button'
                                 >
-                                    <BsReceipt size={24}/>
+                                    <BsReceipt size={24} />
                                     Ver pedidos <span>({orders.length})</span>
                                 </Button>
                             </Link>
 
-                    :
+                            :
 
                             <Link to="/cart">
                                 <Button
                                     type='button'
                                 >
-                                    <BsReceipt size={24}/>
+                                    <BsReceipt size={24} />
                                     Carrinho <span>({cart.length})</span>
                                 </Button>
                             </Link>
@@ -89,33 +89,33 @@ export function Header({search, favoritesFilter}) {
                                 </Profile>
                             </Link>
 
-                    :
+                            :
 
-                    <Profile onClick={userMenu}>
-                        <FiUser />
-                        <div className="user-menu" id="user-menu">
-                                <Link to="/orders">
-                                    <ButtonMenu>
-                                        <FiShoppingBag size={24}/>
-                                        Meus Pedidos
-                                    </ButtonMenu>
-                                </Link>
+                            <Profile onClick={userMenu}>
+                                <FiUser />
+                                <div className="user-menu" id="user-menu">
+                                    <Link to="/orders">
+                                        <ButtonMenu>
+                                            <FiShoppingBag size={24} />
+                                            Meus Pedidos
+                                        </ButtonMenu>
+                                    </Link>
 
-                                <Link to="/">
-                                    <ButtonMenu onClick={favoritesFilter}>
-                                        <FiHeart size={24}/>
-                                        Meus Favoritos
-                                    </ButtonMenu>
-                                </Link>
-                                
-                                <Link to="/profile">
-                                    <ButtonMenu>
-                                        <FiUser size={24}/>
-                                        Meu Perfil
-                                    </ButtonMenu>
-                                </Link>
-                        </div>
-                    </Profile>
+                                    <Link to="/">
+                                        <ButtonMenu onClick={favoritesFilter}>
+                                            <FiHeart size={24} />
+                                            Meus Favoritos
+                                        </ButtonMenu>
+                                    </Link>
+
+                                    <Link to="/profile">
+                                        <ButtonMenu>
+                                            <FiUser size={24} />
+                                            Meu Perfil
+                                        </ButtonMenu>
+                                    </Link>
+                                </div>
+                            </Profile>
                     }
 
                     <Logout to="/" onClick={signOut}>

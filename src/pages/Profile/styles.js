@@ -22,8 +22,6 @@ export const Content = styled.div`
     padding: 4rem;
     
     .card {
-        -webkit-box-shadow: 0px 0px 10px 5px #193746; 
-        box-shadow: 0px 0px 10px 5px #193746;
         border-radius: 1rem;
         margin-top: 4rem;
     }
@@ -44,9 +42,12 @@ export const Form = styled.form`
     
     padding: 5rem;
     border-radius: 1rem 1rem 0 0;
-    border: 1px solid ${({ theme }) => theme.COLORS.BLUE};
     
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+
+    .btn_save {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
     
     .inputs {
         display: flex;
@@ -81,7 +82,6 @@ export const Form = styled.form`
             width: 100%;
             
             border-radius: 0.5rem;
-            border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
             
             background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
         }
@@ -89,6 +89,8 @@ export const Form = styled.form`
         svg {
             color: ${({ theme }) => theme.COLORS.GRAY_200};
         }
+
+        
     }
 
     @media only screen and (min-width: 768px) {
@@ -105,7 +107,6 @@ export const Avatar = styled.div`
         height: 18.6rem;
         border-radius: 50%;
         object-fit: cover;
-        border: 2px solid ${({ theme }) => theme.COLORS.BLUE};
     }
     
     > label {
@@ -122,7 +123,7 @@ export const Avatar = styled.div`
         
         background-color: ${({ theme }) => theme.COLORS.BLUE_500};
         border-radius: 50%;
-        border: 3px solid ${({ theme }) => theme.COLORS.BLUE};
+        border: 3px solid ${({ theme }) => theme.COLORS.WHITE};
 
         cursor: pointer;
 
@@ -133,7 +134,7 @@ export const Avatar = styled.div`
         svg {
             width: 2rem;
             height: 2rem;
-            color: ${({ theme }) => theme.COLORS.BLUE};
+            color: ${({ theme }) => theme.COLORS.WHITE};
         }
     }
 
@@ -151,12 +152,11 @@ export const Infos = styled.div`
     padding: 50px;
     
     border-radius: 0 0 1rem 1rem;
-    border: 1px solid ${({ theme }) => theme.COLORS.BLUE};
-
+   
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
     p {
-        font-size: 1.6rem;
+        font-size: 2.5rem;
         margin-bottom: 4rem;
     }
 
@@ -173,7 +173,7 @@ export const Infos = styled.div`
         border-radius: 0.5rem;
         
         color: ${({ theme }) => theme.COLORS.WHITE};
-        background-color: ${({ theme }) => theme.COLORS.BLUE};
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
         
         margin-bottom: 3rem;
         gap: 1.2rem;

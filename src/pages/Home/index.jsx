@@ -63,8 +63,8 @@ export function Home() {
                 <Container>
                     <Header search={setSearch} favoritesFilter={() => handleFavorites(favorites)}/>
                         <Content>
-
-                            <ThemeSlider theme={theme} toggleTheme={toggleTheme}/>
+                                
+                            {/* <ThemeSlider theme={theme} toggleTheme={toggleTheme}/> */}
                         
                             <Banner>
                                 <img src={background} alt="Imagem de ingredientes" />

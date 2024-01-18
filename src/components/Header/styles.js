@@ -12,41 +12,6 @@ export const Container = styled.header`
     
     justify-content: center;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
-
-    -webkit-box-shadow: 0px 0px 10px 5px #193746; 
-    box-shadow: 0px 0px 10px 5px #193746;
-
-    // ================= KEYFRAMES ================= //
-    @keyframes scale-up-center {
-        0% {
-            transform: scale(1);
-        }
-        100% {
-            transform: scale(1.2);
-        }
-    }
-
-    @keyframes rotate-center {
-    0% {
-        -webkit-transform: rotate(0);
-                transform: rotate(0);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-    }}
-    
-    @keyframes tracking-in-expand {
-    0% {
-        letter-spacing: -0.5em;
-        opacity: 0;
-    }
-    40% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 1;
-    }}
 `;
 
 export const Content = styled.div`
@@ -79,9 +44,7 @@ export const Content = styled.div`
         width: 25px;
         height: 3px;
         margin: 5px auto;
-        
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
+
         background-color: ${({ theme }) => theme.COLORS.BLUE};
     }
 
@@ -105,11 +68,7 @@ export const Content = styled.div`
             border-radius: 0 0 2rem 2rem;
             border: 1px solid ${({ theme }) => theme.COLORS.BLUE};
             
-            transition: 0.3s;
-            
             background-color: ${({ theme }) => theme.COLORS.BLUE_200};
-            box-shadow:
-                0 10px 27px rgba(0, 0, 0, 0.05);
         }
 
         .nav-menu.active {
@@ -145,15 +104,10 @@ export const Logo = styled.div`
     color: ${({ theme }) => theme.COLORS.BLUE};
     
     h1 {
-        font-size: 2.51109rem;
-        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        font-size: 2.5rem;
+        color: ${({ theme }) => theme.COLORS.WHITE_100};
     }
-    
-    .logo img:hover {
-        -webkit-animation: rotate-center 0.6s ease-in-out both;
-        animation: rotate-center 0.6s ease-in-out both;
-    }
-    
+
     a {
         display: flex;
         gap: 1.123rem;
@@ -214,7 +168,7 @@ export const Button = styled.button`
     
     font-size: 1.4rem;
 
-    background-color: ${({ theme }) => theme.COLORS.BLUE};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
     color: ${({ theme }) => theme.COLORS.WHITE};
 
     padding: 0 3rem;
@@ -232,12 +186,8 @@ export const Logout = styled(Link)`
     background: none;
     
     > svg {
-        color: ${({ theme }) => theme.COLORS.BLUE};
+        color: ${({ theme }) => theme.COLORS.WHITE};
         font-size: 3.2rem;
-    }
-
-    > svg:hover {
-        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
 `;
 
@@ -253,14 +203,10 @@ export const Profile = styled.div`
     cursor: pointer;
 
     > svg {
-        color: ${({ theme }) => theme.COLORS.BLUE};
+        color: ${({ theme }) => theme.COLORS.WHITE};
         font-size: 3.2rem;
     }
     
-    > svg:hover {
-        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    }
-
     .user-menu {
         display: none;
     }
@@ -278,13 +224,8 @@ export const Profile = styled.div`
         z-index: 9999;
         
         border-radius: 1rem;
-        border: 1px solid ${({ theme }) => theme.COLORS.BLUE};
-        
-        transition: 0.3s;
         
         background-color: ${({ theme }) => theme.COLORS.BLUE_200};
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
     }
 `;
 

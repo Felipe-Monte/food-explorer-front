@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+/* mudanças felipe */
     display: flex;
     flex-direction: column;
     
@@ -50,11 +51,11 @@ export const Content = styled.div`
     
     .swiper-button-next,
     .swiper-button-prev {
-        width: 9rem;
+        width: 3.3rem;
         height: 51.2rem;
         margin: -25.6rem -1rem;
         
-        color: ${({ theme }) => theme.COLORS.BLUE};
+        color: ${({ theme }) => theme.COLORS.WHITE};
         font-weight: bolder;
         mask-image: none;
     }
@@ -93,8 +94,6 @@ export const Banner = styled.div`
         background: linear-gradient(180deg, ${({ theme }) => theme.COLORS.BLUE_400} 0%, ${({ theme }) => theme.COLORS.BLUE_500} 100%);
         border-radius: 0.8rem;
         position: relative;
-        -webkit-box-shadow: 0px 0px 10px 5px #193746; 
-        box-shadow: 0px 0px 10px 5px #193746;
     }
 
     .title {

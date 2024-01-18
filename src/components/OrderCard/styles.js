@@ -35,4 +35,8 @@ export const Container = styled.div`
         width: 7.2rem;
         height: 7.2rem;
     }
+
+    .btn_color {
+        color: ${({theme}) => theme.COLORS.BACKGROUND_700};
+    }
 `;

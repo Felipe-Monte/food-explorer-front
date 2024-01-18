@@ -69,7 +69,7 @@ export function Orders() {
                     <Header />
                         <Content>
 
-                            <ThemeSlider theme={theme} toggleTheme={toggleTheme}/>
+                            {/* <ThemeSlider theme={theme} toggleTheme={toggleTheme}/> */}
                             
                             <h1>Pedidos</h1>
                     
@@ -90,7 +90,7 @@ export function Orders() {
                                             <tr>
                                                 <td colSpan="4">
                                                     <div className="zeroOrders">
-                                                        <p>Não existem pedidos cadastrados ainda! =/</p>
+                                                        <p>Sem pedidos cadastrados !</p>
                                                     </div>
                                                 </td>
                                             </tr>

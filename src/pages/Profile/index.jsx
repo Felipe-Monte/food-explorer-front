@@ -3,7 +3,7 @@ import { Container, Content, Form, Avatar, Infos, Logo } from './styles';
 
 // Theme Swap Imports
 import { ThemeProvider } from 'styled-components';
-import { ThemeSlider} from "../../components/ThemeSlider";
+import { ThemeSlider } from "../../components/ThemeSlider";
 import { useDarkMode } from '../../styles/useDarkMode';
 import GlobalStyles from '../../styles/global'
 import lightTheme from '../../styles/lightTheme';
@@ -27,7 +27,7 @@ import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 import logo from '../../assets/logo.svg';
 
 export function Profile() {
-    const [ theme, toggleTheme ] = useDarkMode();
+    const [theme, toggleTheme] = useDarkMode();
     const themeMode = theme === 'lightTheme' ? lightTheme : darkTheme;
 
     const { user, updateProfile, loading } = useAuth();
@@ -66,141 +66,122 @@ export function Profile() {
     return (
         <ThemeProvider theme={themeMode}>
             <GlobalStyles />
-                <Container>
-                    <Header />
-                        <Content>
-                            
-                            <ThemeSlider theme={theme} toggleTheme={toggleTheme}/>
+            <Container>
+                <Header />
+                <Content>
 
-                            <div className='card'>
-                                <Form>
-                                    <Avatar>
-                                        <img 
-                                            src={avatar} 
-                                            alt="Foto do usuário" 
-                                        />
+                    {/* <ThemeSlider theme={theme} toggleTheme={toggleTheme}/> */}
 
-                                        <label htmlFor="avatar">
-                                            <FiCamera />
+                    <div className='card'>
+                        <Form>
+                            <Avatar>
+                                <img
+                                    src={avatar}
+                                    alt="Foto do usuário"
+                                />
 
-                                            <input
-                                                id="avatar"
-                                                type="file"
-                                                accept="image/*"
-                                                onChange={handleChangeAvatar}
-                                            />
-                                        </label>
-                                    </Avatar>
+                                <label htmlFor="avatar">
+                                    <FiCamera />
 
-                                    <div className='inputs'>
-                                        <label>
-                                            <FiUser size={20}/>
-                                            <input 
-                                                type="text" 
-                                                placeholder="Nome"
-                                                value={name}
-                                                onChange={e => setName(e.target.value)}
-                                            />
-                                        </label>
-
-                                        <label>
-                                            <FiMail size={20}/>
-                                            <input 
-                                                type="text" 
-                                                placeholder="E-mail"
-                                                value={email}
-                                                onChange={e => setEmail(e.target.value)}
-                                            />
-                                        </label>
-
-                                        <label>
-                                            <FiLock size={20}/>
-                                            <input 
-                                                type="password" 
-                                                placeholder="Senha atual"
-                                                onChange={e => setPasswordOld(e.target.value)}
-                                            />
-                                        </label>
-
-                                        <label>
-                                            <FiLock size={20}/>
-                                            <input 
-                                                type="password" 
-                                                placeholder="Nova senha"
-                                                onChange={e => setPasswordNew(e.target.value)}
-                                            />
-                                        </label>
-                                    </div>
-
-                                    <Button 
-                                        title={loading ? "Salvando" : "Salvar"}
-                                        onClick={handleUpdate} 
-                                        disabled={loading}
+                                    <input
+                                        id="avatar"
+                                        type="file"
+                                        accept="image/*"
+                                        onChange={handleChangeAvatar}
                                     />
-                                </Form>
+                                </label>
+                            </Avatar>
 
-                                {
-                                    user.isAdmin ?
+                            <div className='inputs'>
+                                <label>
+                                    <FiUser size={20} />
+                                    <input
+                                        type="text"
+                                        placeholder="Nome"
+                                        value={name}
+                                        onChange={e => setName(e.target.value)}
+                                    />
+                                </label>
 
-                                        <Infos>
-                                            <Logo>
-                                                <div className="logo">
-                                                    <img src={logo} alt="" />
-                                                </div>
-                                            </Logo>
-                                            
-                                            <p>Olá <span>{name}</span>, acesse a opção desejada:</p>
+                                <label>
+                                    <FiMail size={20} />
+                                    <input
+                                        type="text"
+                                        placeholder="E-mail"
+                                        value={email}
+                                        onChange={e => setEmail(e.target.value)}
+                                    />
+                                </label>
 
-                                            <Link to="/orders">
-                                                <Button
-                                                    title="Ver pedidos"
-                                                    icon={FiShoppingBag}
-                                                />
-                                            </Link>
+                                <label>
+                                    <FiLock size={20} />
+                                    <input
+                                        type="password"
+                                        placeholder="Senha atual"
+                                        onChange={e => setPasswordOld(e.target.value)}
+                                    />
+                                </label>
 
-                                            <Link to="/createdish">
-                                                <Button 
-                                                    title="Criar novo Prato"
-                                                    icon={FiPlus}
-                                                />
-                                            </Link>
-                                        </Infos>
-
-                                    :
-
-                                        <Infos>
-                                            <Logo>
-                                                <div className="logo">
-                                                        <img src={logo} alt="" />
-                                                </div>
-                                            </Logo>
-                                            
-                                            <p>Olá <span>{name}</span>, acesse a opção desejada:</p>
-
-                                            <Link to="/orders">
-                                                <Button
-                                                    title="Meus pedidos"
-                                                    icon={FiShoppingBag}
-                                                />
-                                            </Link>
-
-                                            <Button
-                                                title="Contato por e-mail"
-                                                icon={FiMail}
-                                                onClick={() => window.location = 'mailto:contato@foodexplorer.com'}
-                                            />
-
-                                            <Button
-                                                title="WhatsApp"
-                                                icon={BsWhatsapp}
-                                                onClick={() => window.open("https://api.whatsapp.com/send?phone=+999999999999&text=Oi pessoal do FoodExplorer! Gostaria de falar sobre o meu pedido!", '_blank')}
-                                            />
-                                        </Infos>
-                                }
+                                <label>
+                                    <FiLock size={20} />
+                                    <input
+                                        type="password"
+                                        placeholder="Nova senha"
+                                        onChange={e => setPasswordNew(e.target.value)}
+                                    />
+                                </label>
                             </div>
-                        </Content>
-                    <Footer />
-                </Container>
+
+                            <Button
+                                title={loading ? "Salvando" : "Salvar"}
+                                onClick={handleUpdate}
+                                disabled={loading}
+                                className="btn_save"
+                            />
+                        </Form>
+
+                        {
+                            user.isAdmin ?
+
+                                <Infos>
+                                   
+
+                                    <p>Bem vindo ! <span>{name}</span></p>
+
+                                    <Link to="/orders">
+                                        <Button
+                                            title="Ver pedidos"
+                                            icon={FiShoppingBag}
+                                        />
+                                    </Link>
+
+                                    <Link to="/createdish">
+                                        <Button
+                                            title="Criar novo Prato"
+                                            icon={FiPlus}
+                                        />
+                                    </Link>
+                                </Infos>
+
+                                :
+
+                                <Infos>
+                                    
+
+                                    <p>Bem vindo ! <span>{name}</span></p>
+
+                                    <Link to="/orders">
+                                        <Button
+                                            title="Meus pedidos"
+                                            icon={FiShoppingBag}
+                                        />
+                                    </Link>
+                                </Infos>
+                        }
+                    </div>
+                </Content>
+                <Footer />
+            </Container>
         </ThemeProvider>
     );
 }

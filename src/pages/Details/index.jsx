@@ -90,13 +90,14 @@ export function Details() {
 
                         <Content>
 
-                            <ThemeSlider theme={theme} toggleTheme={toggleTheme}/>
+                            {/* <ThemeSlider theme={theme} toggleTheme={toggleTheme}/> */}
                             
                             <Link>
                                 <ButtonText
                                     title="Voltar" 
                                     icon={RiArrowLeftSLine} 
                                     onClick={handleBack}
+                                    className="button_back"
                                 />
                             </Link>
                     
@@ -122,8 +123,7 @@ export function Details() {
                                         </Ingredient>
                                                             
                                         <div className="price">
-                                            <h4>R$ {data.price}</h4>
-                                        
+                                                              
                                             <div className="purchaseCard">
                                                 {
                                                     user.isAdmin ?
@@ -157,9 +157,9 @@ export function Details() {
 
                                                         <Button 
                                                             title="incluir"
-                                                            icon={BsReceipt}
                                                             onClick={() => handleAddDishToCart(data, quantity, imageURL)}
                                                             style={ { height: 56, width: 92, padding: '12px 4px' } }
+                                                            className="button_add"
                                                         />
                                                     </PurchaseCard>
                                                 }

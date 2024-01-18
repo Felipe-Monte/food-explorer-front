@@ -15,7 +15,7 @@ import { useState } from "react";
 
 //====import icons/images====//
 import { BsReceipt } from 'react-icons/bs';
-import { FiMinus, FiPlus } from 'react-icons/fi';
+import { FiMinus, FiPlus, FiArrowRight  } from 'react-icons/fi';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 import imagePlaceholder from '../../assets/image-not-found-icon.svg';
 
@@ -63,7 +63,7 @@ export function Card({ data, ...rest }) {
                         <div className="container">
                             <img src={imageURL} alt="Imagem do prato" />
                             <Link to={`/details/${data.id}`}>
-                                <h3 className="product-title">{data.title}{' >'}</h3>
+                                <h3 className="product-title">{data.title}{<FiArrowRight/>}</h3>
                             </Link>
                             <p className="description">{data.description}</p>
                             <h1 className="price">R$ {data.price}</h1>
@@ -93,7 +93,7 @@ export function Card({ data, ...rest }) {
                         <div className="container">
                             <img src={imageURL} alt="Imagem do prato" />
                             <Link to={`/details/${data.id}`}>
-                                <h3 className="product-title">{data.title}{' >'} </h3>
+                                <h3 className="product-title">{data.title}{<FiArrowRight/>} </h3>
                             </Link>
                             <p className="description">{data.description}</p>
                             <h1 className="price">R$ {data.price}</h1>
@@ -113,9 +113,9 @@ export function Card({ data, ...rest }) {
 
                                 <Button 
                                     title="incluir"
-                                    icon={BsReceipt}
                                     onClick={() => handleAddDishToCart(data, quantity, imageURL)}
                                     style={ { height: 56, width: 92, padding: '12px 4px' } }
+                                    className="button-send-cart"
                                 />
                             </PurchaseCard>
                         </div>

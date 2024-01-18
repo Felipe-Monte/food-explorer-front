@@ -7,7 +7,7 @@ export function Footer() {
             <Content>
                 <Logo>
                     <div className="logo">    
-                        <img src={logo_gray} alt="" />
+                        <img src={logo_gray} alt="logo" />
                         <span>food explorer</span>
                     </div>
                 </Logo>
