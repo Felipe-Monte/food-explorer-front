@@ -25,7 +25,7 @@ export const Container = styled.div`
     }
 
     .button-add {
-        color: ${({ theme }) => theme.COLORS.BLUE};
+        color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
     > input {

@@ -14,6 +14,10 @@ export const Content = styled.div`
     
     background: rgba(0, 0, 0, 0.32);
 
+    .button-send-cart-admin {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
+
     .favButton {
         position: absolute;
         top: 1.2rem;

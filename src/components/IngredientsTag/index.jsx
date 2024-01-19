@@ -13,7 +13,7 @@ export function IngredientsTag({ isNew, value, onClick, ...rest }) {
         list="ingredientName"
       />
 
-      <datalist id="ingredientName">
+      {/* <datalist id="ingredientName">
         <option value="Aguardente">Aguardente</option>
         <option value="Alface">Alface</option>
         <option value="Ameixa">Ameixa</option>
@@ -50,7 +50,7 @@ export function IngredientsTag({ isNew, value, onClick, ...rest }) {
         <option value="Sorvete">Sorvete</option>
         <option value="Tomate">Tomate</option>
         <option value="Whiskey">Whiskey</option>
-      </datalist>
+      </datalist> */}
 
       <button
         type="button"

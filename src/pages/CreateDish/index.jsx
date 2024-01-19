@@ -132,12 +132,12 @@ export function CreateDish() {
 
         {user.isAdmin ? (
           <Content>
-            <ThemeSlider theme={theme} toggleTheme={toggleTheme} />
+            {/* <ThemeSlider theme={theme} toggleTheme={toggleTheme} /> */}
 
             <Form>
               <header>
                 <Link to="/">
-                  <ButtonText title="Voltar" icon={RiArrowLeftSLine} />
+                  <ButtonText title="Voltar" icon={RiArrowLeftSLine} className="btn_back" />
                 </Link>
                 <h1>Criar prato</h1>
               </header>
@@ -219,7 +219,7 @@ export function CreateDish() {
               <div className="textarea">
                 <p>Descrição</p>
                 <Textarea
-                  placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
+                  placeholder="Coloque a descrição"
                   onChange={(e) => setDescription(e.target.value)}
                 />
               </div>
@@ -230,6 +230,7 @@ export function CreateDish() {
                 title={loading ? "Salvando alterações" : "Salvar alterações"}
                 onClick={handleNewDish}
                 disabled={loading}
+                className="btn_save"
               />
             </div>
           </Content>

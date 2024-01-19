@@ -72,7 +72,7 @@ export function Card({ data, ...rest }) {
             <p className="description">{data.description}</p>
             <h1 className="price">R$ {data.price}</h1>
             <Link to={`/editDish/${data.id}`}>
-              <Button title="editar prato" icon={BsReceipt} />
+              <Button title="Editar prato" className="button-send-cart-admin"/>
             </Link>
           </div>
         </Content>

@@ -159,6 +159,10 @@ export const PurchaseCard = styled.div`
         background-color: ${({theme}) => theme.COLORS.BACKGROUND_700};
     }
 
+    .btn_edit {
+        background-color: ${({theme}) => theme.COLORS.BACKGROUND_700};
+    }
+
     .counter {
         display: flex;
         align-items: center;

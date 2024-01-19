@@ -35,7 +35,15 @@ export const Content = styled.div`
     }
 
     .deleteButton {
-        background: ${({ theme }) => theme.COLORS.RED};
+        background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
+
+    .addButton {
+        background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
+
+    .btn_back {
+        color: ${({ theme }) => theme.COLORS.WHITE};
     }
     
 
@@ -154,7 +162,7 @@ export const Form = styled.form`
     }
 
     .dishCategory select {
-        background: ${({ theme }) => theme.COLORS.BLUE_300};
+        background-color: ${({ theme }) => theme.COLORS.BLUE_300};
 
         border-radius: 0.5rem;
         border: none;

@@ -26,11 +26,6 @@ export const Container = styled.div`
         }
     }
 
-    input:focus {
-        -webkit-box-shadow: 0px 0px 10px 5px #193746; 
-        box-shadow: 0px 0px 10px 5px #193746;
-    }
-    
     > svg {
         margin-left: 1.4rem;
     }

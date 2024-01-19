@@ -180,13 +180,13 @@ export function EditDish() {
 
         {user.isAdmin ? (
           <Content>
-            <ThemeSlider theme={theme} toggleTheme={toggleTheme} />
+            {/* <ThemeSlider theme={theme} toggleTheme={toggleTheme} /> */}
 
             {data && (
               <Form>
                 <header>
                   <Link to="/">
-                    <ButtonText title="Voltar" icon={RiArrowLeftSLine} />
+                    <ButtonText title="Voltar" icon={RiArrowLeftSLine} className="btn_back" />
                   </Link>
                   <h1>Editar prato</h1>
                 </header>
@@ -302,6 +302,7 @@ export function EditDish() {
                 title={loading ? "Salvando alterações" : "Salvar alterações"}
                 onClick={handleUpdateDish}
                 disabled={loading}
+                className="addButton"
               />
             </div>
           </Content>

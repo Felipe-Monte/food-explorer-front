@@ -30,6 +30,14 @@ export const Content = styled.div`
         display: flex;
         justify-content: center;
         margin-top: 3.2rem;
+
+        .btn_save {
+            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+        }
+    }
+
+    .btn_back {
+        color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
     @media only screen and (min-width: 768px) {
@@ -130,7 +138,7 @@ export const Form = styled.form`
         }
 
         > label:hover {
-            background-color: ${({ theme }) => theme.COLORS.BLUE};
+            background-color: ${({ theme }) => theme.COLORS.GRAY_300};
         }
     }
 
