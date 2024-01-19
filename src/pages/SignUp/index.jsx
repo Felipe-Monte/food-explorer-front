@@ -80,7 +80,7 @@ export function SignUp() {
           <div className="inputs">
             <p>Seu nome</p>
             <Input
-              placeholder="Exemplo: Maria da Silva"
+              placeholder="Nome do usuário"
               type="text"
               onChange={(e) => setName(e.target.value)}
             />
@@ -89,7 +89,7 @@ export function SignUp() {
           <div className="inputs">
             <p>Email</p>
             <Input
-              placeholder="Exemplo: exemplo@exemplo.com.br"
+              placeholder="exemplo@exemplo.com.br"
               type="text"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -108,6 +108,7 @@ export function SignUp() {
             title={loading ? "Cadastrando" : "Criar conta"}
             onClick={handleSignUp}
             disabled={loading}
+            className="btn_login"
           />
 
           <Link onClick={handleBack}>Já tenho uma conta</Link>

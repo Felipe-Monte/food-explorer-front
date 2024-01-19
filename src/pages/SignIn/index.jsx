@@ -53,7 +53,7 @@ export function SignIn() {
           <div className="inputs">
             <p>Email</p>
             <Input
-              placeholder="Exemplo: exemplo@exemplo.com.br"
+              placeholder="exemplo@exemplo.com.br"
               type="text"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -72,6 +72,7 @@ export function SignIn() {
             title={loading ? "Entrando" : "Entrar"}
             onClick={handleSignIn}
             disabled={loading}
+            className="btn_login"
           />
 
           <Link to="/register">Criar conta</Link>

@@ -13,21 +13,6 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-
-    @keyframes puff-in-center {
-        0% {
-            transform: scale(2);
-            filter: blur(4px);
-            opacity: 0;
-        }
-        100% {
-            transform: scale(1);
-            filter: blur(0px);
-            opacity: 1;
-        }
-    }
-
     @media only screen and (min-width: 768px) {
         flex-direction: row;
     }
@@ -46,9 +31,7 @@ export const Form = styled.form`
     border-radius: 1.6rem;
 
     background-color: ${({ theme }) => theme.COLORS.BLUE_200};
-    -webkit-box-shadow: 0px 0px 10px 5px #193746; 
-    box-shadow: 0px 0px 10px 5px #193746;
-
+ 
     > h2 {
         font-family: 'Poppins', sans-serif;
         font-size: 3.2rem;
@@ -63,8 +46,12 @@ export const Form = styled.form`
         margin-top: 3.2rem;
         
         text-align: center;
-        color: ${({ theme }) => theme.COLORS.BLUE};
+        color: ${({ theme }) => theme.COLORS.WHITE_100};
     }
+
+    .btn_login {
+            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+        }
 
     > .inputs {
         margin-bottom: 3.2rem;
@@ -86,6 +73,7 @@ export const Logo = styled.div`
     h1 {
         font-size: clamp(3rem, 3rem + 1.5vw, 4.248rem);
         white-space: nowrap;
+        color: ${({ theme }) => theme.COLORS.WHITE_100};
     }
 
     .logo {
