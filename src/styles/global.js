@@ -17,7 +17,7 @@ export default createGlobalStyle`
 
         -webkit-font-smoothing: antialiased;
 
-        *::-webkit-scrollbar {
+        /* *::-webkit-scrollbar {
             width: 22px;
             height: 22px;
             border-radius: 9999px;
@@ -33,7 +33,7 @@ export default createGlobalStyle`
             border-radius: 80px;
             box-shadow: inset 0 0 0px 6px ${({ theme }) => theme.COLORS.WHITE};
             border: solid 10px transparent;
-        }
+        } */
 
         /* Chrome, Safari, Edge, Opera */
         input::-webkit-outer-spin-button,

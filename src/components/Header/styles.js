@@ -12,6 +12,8 @@ export const Container = styled.header`
     
     justify-content: center;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+
+    border: 2px solid white;
 `;
 
 export const Content = styled.div`
@@ -45,7 +47,7 @@ export const Content = styled.div`
         height: 3px;
         margin: 5px auto;
 
-        background-color: ${({ theme }) => theme.COLORS.BLUE};
+        background-color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
     @media only screen and (max-width: 768px) {
@@ -66,7 +68,6 @@ export const Content = styled.div`
             gap: 2rem;
             padding: 5rem 5rem 3rem;
             border-radius: 0 0 2rem 2rem;
-            border: 1px solid ${({ theme }) => theme.COLORS.BLUE};
             
             background-color: ${({ theme }) => theme.COLORS.BLUE_200};
         }

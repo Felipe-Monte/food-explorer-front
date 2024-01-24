@@ -13,8 +13,13 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    @media only screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
         flex-direction: row;
+    }
+
+    @media screen and (max-width: 500px){
+        width: 100%;
+        padding: 14.2rem 1rem;
     }
 `;
 
@@ -63,6 +68,15 @@ export const Form = styled.form`
         margin-bottom: 0.8rem;
         color: ${({ theme }) => theme.COLORS.GRAY_100};
     }
+
+    @media only screen and (max-width: 500px) {
+        padding: 1rem;
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+        h2 {
+            display: none;
+        }
+    }
 `;
 
 export const Logo = styled.div`
@@ -85,5 +99,20 @@ export const Logo = styled.div`
     svg {
         height: 5rem;
         width: 5rem;
+    }
+
+    @media only screen and (max-width: 500px){
+        h1 {
+            font-size: clamp(3rem, 2.5rem + 1.5vw, 4.248rem);
+        }
+
+        svg {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+
+        .logo {     
+            gap: 1.2rem;
+        }
     }
 `;
