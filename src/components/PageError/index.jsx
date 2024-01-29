@@ -1,10 +1,7 @@
-// Import de estilização
 import { Container } from "./styles";
 
-// Import de componentes
 import { ButtonText } from "../ButtonText";
 
-// Imports estratégicos
 import { useNavigate } from "react-router-dom";
 import imageError401 from "../../assets/401 Error Unauthorized.svg";
 

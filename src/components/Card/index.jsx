@@ -1,11 +1,8 @@
-//====import styles====//
 import { Container, Content, PurchaseCard } from "./styles.js";
 
-//====import components====//
 import { Button } from "../Button";
 import { ButtonText } from "../ButtonText";
 
-//====import hooks and API====//
 import { useAuth } from "../../hooks/auth";
 import { useFavorites } from "../../hooks/favorites";
 import { useCart } from "../../hooks/cart";
@@ -13,33 +10,26 @@ import { Link } from "react-router-dom";
 import { api } from "../../services/api";
 import { useState } from "react";
 
-//====import icons/images====//
 import { BsReceipt } from "react-icons/bs";
 import { FiMinus, FiPlus, FiArrowRight } from "react-icons/fi";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import imagePlaceholder from "../../assets/image-not-found-icon.svg";
 
 export function Card({ data, ...rest }) {
-  //====load user credentials====//
   const { user } = useAuth();
 
-  //====load dish image====//
   const imageURL = data.image
     ? `${api.defaults.baseURL}/files/${data.image}`
     : imagePlaceholder;
 
-  //====load and store favorites====//
   const { favorites, addDishToFavorite, removeDishFromFavorite } =
     useFavorites();
   const isFavorite = favorites.some((dish) => dish.title === data.title);
 
-  //====load and store cart====//
   const { handleAddDishToCart, paymentAccept } = useCart();
 
-  //====set quantity initial state====//
   const [quantity, setQuantity] = useState(1);
 
-  //====increase quantity====//
   const increase = () => {
     if (quantity > 19) {
       alert("Erro: A quantidade máxima é de 20 unidades");
@@ -48,7 +38,6 @@ export function Card({ data, ...rest }) {
     setQuantity((count) => count + 1);
   };
 
-  //====decrease quantity====//
   const decrease = () => {
     if (quantity < 2) {
       alert("Erro: A quantidade mínima é 1 unidade");
@@ -72,7 +61,7 @@ export function Card({ data, ...rest }) {
             <p className="description">{data.description}</p>
             <h1 className="price">R$ {data.price}</h1>
             <Link to={`/editDish/${data.id}`}>
-              <Button title="Editar prato" className="button-send-cart-admin"/>
+              <Button title="Editar prato" className="button-send-cart-admin" />
             </Link>
           </div>
         </Content>

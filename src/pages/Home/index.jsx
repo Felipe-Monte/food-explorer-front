@@ -1,7 +1,5 @@
-// Styling Imports
 import { Container, Content, Banner } from "./styles.js";
 
-// Theme Swap Imports
 import { ThemeProvider } from "styled-components";
 import { ThemeSlider } from "../../components/ThemeSlider";
 import { useDarkMode } from "../../styles/useDarkMode";
@@ -9,27 +7,21 @@ import GlobalStyles from "../../styles/global";
 import lightTheme from "../../styles/lightTheme";
 import darkTheme from "../../styles/theme";
 
-// Components Imports
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Card } from "../../components/Card";
 
-// Strategic Imports (API and others)
 import { api } from "../../services/api";
 import { useState, useEffect } from "react";
 import { useFavorites } from "../../hooks/favorites";
 
-// Image Imports
 import background from "../../assets/Mask group.png";
 
-// Swiper Import
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Swiper style Import
 import "swiper/css";
 import "swiper/css/navigation";
 
-// Swiper Required Module
 import { Navigation } from "swiper";
 
 export function Home() {
@@ -41,7 +33,6 @@ export function Home() {
 
   const { favorites } = useFavorites();
 
-  // Favorites Function
   async function handleFavorites(favorite) {
     if (favorite.length === 0) {
       return;

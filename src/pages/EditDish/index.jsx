@@ -1,7 +1,5 @@
-// Styling Imports
 import { Container, Content, Form, Image } from "./styles.js";
 
-// Theme Swap Imports
 import { ThemeProvider } from "styled-components";
 import { ThemeSlider } from "../../components/ThemeSlider";
 import { useDarkMode } from "../../styles/useDarkMode";
@@ -9,7 +7,6 @@ import GlobalStyles from "../../styles/global";
 import lightTheme from "../../styles/lightTheme";
 import darkTheme from "../../styles/theme";
 
-// Components Imports
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Button } from "../../components/Button";
@@ -19,7 +16,6 @@ import { IngredientsTag } from "../../components/IngredientsTag";
 import { Textarea } from "../../components/Textarea";
 import { PageError } from "../../components/PageError";
 
-// Strategic Imports (API and others)
 import { api } from "../../services/api";
 import { useAuth } from "../../hooks/auth";
 import { useState, useEffect } from "react";
@@ -27,7 +23,6 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-// Image Imports
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { FiCamera } from "react-icons/fi";
 
@@ -51,7 +46,6 @@ export function EditDish() {
 
   const [data, setData] = useState(null);
 
-  // Change Image Function
   const imageURL = data && `${api.defaults.baseURL}/files/${data.image}`;
   const [image, setImage] = useState();
   const [imageFile, setImageFile] = useState(null);
@@ -64,7 +58,6 @@ export function EditDish() {
     setImage(imagePreview);
   }
 
-  // Add and Remove Ingredients Function
   function handleAddIngredient() {
     if (newIngredient.length < 3) {
       return alert(
@@ -82,7 +75,6 @@ export function EditDish() {
     );
   }
 
-  // Update Dish Function
   async function handleUpdateDish() {
     if (!image) {
       return alert("Erro: Você não carregou a nova imagem do prato!");
@@ -93,25 +85,25 @@ export function EditDish() {
     }
 
     if (ingredients.length < 1) {
-      return alert("Erro: Adicione pelo menos um ingrediente!");
+      return alert("Adicione pelo menos um ingrediente!");
     }
 
     if (newIngredient) {
       return alert(
-        "Erro: Você deixou um ingrediente no campo para adicionar, mas não clicou em adicionar. Clique no sinal de + para adicionar!"
+        "Você deixou um ingrediente no campo para adicionar, mas não clicou em adicionar. Clique no sinal de + para adicionar!"
       );
     }
 
     if (!category) {
-      return alert("Erro: Você não selecionou a categoria do prato!");
+      return alert("Você não selecionou a categoria do prato!");
     }
 
     if (!price) {
-      return alert("Erro: Você não informou o preço do prato!");
+      return alert("Você não informou o preço do prato!");
     }
 
     if (!description) {
-      return alert("Erro: Você não informou uma descrição para o prato!");
+      return alert("Você não informou uma descrição para o prato!");
     }
 
     setLoading(true);
@@ -156,7 +148,6 @@ export function EditDish() {
     fetchDish();
   }, []);
 
-  // Remove Dish Function
   async function handleRemoveDish() {
     setLoadingDelete(true);
     const isConfirm = confirm("Tem certeza que deseja remover este item?");
@@ -186,7 +177,11 @@ export function EditDish() {
               <Form>
                 <header>
                   <Link to="/">
-                    <ButtonText title="Voltar" icon={RiArrowLeftSLine} className="btn_back" />
+                    <ButtonText
+                      title="Voltar"
+                      icon={RiArrowLeftSLine}
+                      className="btn_back"
+                    />
                   </Link>
                   <h1>Editar prato</h1>
                 </header>

@@ -1,7 +1,5 @@
-// Styling Imports
 import { Container, Content, Table } from "./styles.js";
 
-// Theme Swap Imports
 import { ThemeProvider } from "styled-components";
 import { ThemeSlider } from "../../components/ThemeSlider";
 import { useDarkMode } from "../../styles/useDarkMode";
@@ -9,11 +7,9 @@ import GlobalStyles from "../../styles/global";
 import lightTheme from "../../styles/lightTheme";
 import darkTheme from "../../styles/theme";
 
-// Components Imports
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 
-// Strategic imports (API and others)
 import { api } from "../../services/api";
 import { useAuth } from "../../hooks/auth";
 import { useEffect, useState } from "react";
@@ -35,7 +31,6 @@ export function Orders() {
     fetchOrders();
   }, []);
 
-  // Function for change the Order Status
   async function handleOrderStatus(order, event) {
     let statusSelected = event.target.value;
 
@@ -48,7 +43,6 @@ export function Orders() {
     location.reload();
   }
 
-  // Function for formatting the Order Date
   function formatDate(date) {
     const dateFormatted = new Date(date);
 

@@ -1,16 +1,12 @@
-// Styling Imports
 import { Container, Form, Logo } from "./styles";
 
-// Theme Import
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../../styles/global";
 import darkTheme from "../../styles/theme";
 
-// Components Imports
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
-// Strategic Imports (API and others)
 import { api } from "../../services/api";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";

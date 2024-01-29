@@ -1,14 +1,11 @@
 import { Container, Content } from "./styles";
 
-// Import Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Import required modules
 import { Navigation, Pagination } from "swiper";
 
 export function Carousel({ children }) {

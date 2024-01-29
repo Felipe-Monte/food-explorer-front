@@ -1,7 +1,5 @@
-// Styling Imports
 import { Container, Content, Ingredient, PurchaseCard } from "./styles.js";
 
-// Theme Swap Imports
 import { ThemeProvider } from "styled-components";
 import { ThemeSlider } from "../../components/ThemeSlider";
 import { useDarkMode } from "../../styles/useDarkMode";
@@ -9,14 +7,12 @@ import GlobalStyles from "../../styles/global";
 import lightTheme from "../../styles/lightTheme";
 import darkTheme from "../../styles/theme";
 
-// Components Imports
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { ButtonText } from "../../components/ButtonText";
 import { Ingredients } from "../../components/Ingredients";
 import { Button } from "../../components/Button";
 
-// Strategic Imports (API and others)
 import { api } from "../../services/api";
 import { useAuth } from "../../hooks/auth";
 import { useCart } from "../../hooks/cart";
@@ -25,7 +21,6 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-// Image Imports
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { BsReceipt } from "react-icons/bs";
@@ -47,13 +42,10 @@ export function Details() {
 
   const imageURL = data && `${api.defaults.baseURL}/files/${data.image}`;
 
-  // Load and store cart
   const { handleAddDishToCart } = useCart();
 
-  // Set quantity initial state
   const [quantity, setQuantity] = useState(1);
 
-  // Increase Quantity
   const increase = () => {
     if (quantity > 19) {
       alert("Erro: A quantidade máxima é de 20 unidades");
@@ -62,7 +54,6 @@ export function Details() {
     setQuantity((count) => count + 1);
   };
 
-  // Decrease Quantity
   const decrease = () => {
     if (quantity < 2) {
       alert("Erro: A quantidade mínima é 1 unidade");
@@ -121,7 +112,10 @@ export function Details() {
                         <PurchaseCard>
                           {data && (
                             <Link to={`/editdish/${data.id}`}>
-                              <Button title="editar prato" className="btn_edit" />
+                              <Button
+                                title="editar prato"
+                                className="btn_edit"
+                              />
                             </Link>
                           )}
                         </PurchaseCard>

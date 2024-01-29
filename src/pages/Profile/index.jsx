@@ -1,7 +1,5 @@
-// Styling Imports
 import { Container, Content, Form, Avatar, Infos, Logo } from "./styles";
 
-// Theme Swap Imports
 import { ThemeProvider } from "styled-components";
 import { ThemeSlider } from "../../components/ThemeSlider";
 import { useDarkMode } from "../../styles/useDarkMode";
@@ -9,18 +7,15 @@ import GlobalStyles from "../../styles/global";
 import lightTheme from "../../styles/lightTheme";
 import darkTheme from "../../styles/theme";
 
-// Components Imports
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Button } from "../../components/Button";
 
-// Strategic Imports (API and others)
 import { api } from "../../services/api";
 import { useAuth } from "../../hooks/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-// Image Imports
 import {
   FiUser,
   FiMail,
@@ -44,7 +39,6 @@ export function Profile() {
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
 
-  // Update User Function
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
     : avatarPlaceholder;

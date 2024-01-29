@@ -1,94 +1,93 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    
-    width: 100%;
-    min-width: 320px;
-    height: 100vh;   
-    min-height: 100%;
-    
-    overflow: auto;
-    overflow: overlay;    
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 320px;
+  height: 100vh;
+  min-height: 100%;
+
+  overflow: auto;
+  overflow: overlay;
 `;
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 121.2rem;
+  height: 100%;
+  margin: auto;
+  padding: 3.5rem 4rem;
+
+  overflow: auto;
+  overflow: overlay;
+
+  .button {
     display: flex;
-    flex-direction: column;
-    
-    width: 100%;
-    max-width: 121.2rem;
-    height: 100%;
-    margin: auto;
-    padding: 3.5rem 4rem;
+    justify-content: center;
+    margin-top: 3.2rem;
 
-    overflow: auto;
-    overflow: overlay;    
-    
+    .btn_save {
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
+  }
+
+  .btn_back {
+    color: ${({ theme }) => theme.COLORS.WHITE};
+  }
+
+  @media only screen and (min-width: 768px) {
     .button {
-        display: flex;
-        justify-content: center;
-        margin-top: 3.2rem;
-
-        .btn_save {
-            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-        }
+      align-self: flex-end;
+      justify-content: end;
     }
-
-    .btn_back {
-        color: ${({ theme }) => theme.COLORS.WHITE};
-    }
-
-    @media only screen and (min-width: 768px) {
-        .button {
-            align-self: flex-end;
-            justify-content: end;
-        }
-    }
+  }
 `;
 
 export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  gap: 3.2rem;
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+    text-align: center;
+
+    margin: 2.4rem 0 0;
+  }
+
+  button:first-child {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  > div p {
+    margin-bottom: 0.8rem;
+  }
+
+  .details {
     display: flex;
-    flex-direction: column;
-    
-
+    width: auto;
     gap: 3.2rem;
+  }
 
-    h1 {
-        font-family: 'Poppins', sans-serif;
-        font-size: 3.2rem;
-        font-weight: 500;
-        line-height: 4.5rem;
-        text-align: center;
-        
-        margin: 2.4rem 0 0;
-    }
+  .dish {
+    width: 50%;
+  }
 
-    button:first-child {
-        font-size: 2.4rem;
-    }
-
-    .header {
-        justify-content: center;
-        text-align: center;
-    }
-
-    > div p {
-        margin-bottom: 0.8rem;
-    }
-
-    .details {
-        display: flex;
-        width: auto;
-        gap: 3.2rem;
-    }
-
-    .dish {
-        width: 50%;
-    }
-
-    .dishCategory select {
+  .dishCategory select {
     background: ${({ theme }) => theme.COLORS.BLUE_300};
 
     border-radius: 0.5rem;
@@ -105,109 +104,107 @@ export const Form = styled.form`
     line-height: 26px;
 
     color: ${({ theme }) => theme.COLORS.GRAY_100};
+  }
 
+  .dishImage {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+
+    input[type="file"] {
+      display: none;
+    }
+
+    > label {
+      display: flex;
+      justify-content: center;
+
+      padding: 1.1rem 0.5rem;
+      gap: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
+
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+
+      font-family: "Poppins", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 2.4rem;
+
+      cursor: pointer;
+    }
+
+    > label:hover {
+      background-color: ${({ theme }) => theme.COLORS.GRAY_300};
+    }
+  }
+
+  .ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    height: auto;
+    gap: 2.4rem;
+    padding: 0.8rem;
+
+    border-radius: 0.8rem;
+    margin-bottom: 3.2rem;
+    border: 1px solid white;
+  }
+
+  .ingredientsTag {
+    justify-content: space-between;
+  }
+
+  .price {
+    max-width: 15rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    h1 {
+      text-align: left;
     }
 
     .dishImage {
-        display: flex;
-        flex-direction: column;
-        
-        width: 50%;
+      max-width: 22.9rem;
+    }
 
-        input[type='file'] {
-        display: none;
-        }
-        
-        > label {
-            display: flex;
-            justify-content: center;
+    .dish {
+      max-width: 85.9rem;
+      width: 100%;
+    }
 
-            padding: 1.1rem 0.5rem;
-            gap: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
-
-            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 2.4rem;
-
-            cursor: pointer;
-        }
-
-        > label:hover {
-            background-color: ${({ theme }) => theme.COLORS.GRAY_300};
-        }
+    > .details {
+      display: flex;
+      justify-content: space-between;
     }
 
     .ingredients {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        
-        height: auto;
-        gap: 2.4rem;
-        padding: 0.8rem;
-        
-        border-radius: 0.8rem;
-        margin-bottom: 3.2rem;
-        border: 1px solid white;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+
+      width: 100%;
+      max-width: 83.7rem;
+      height: auto;
+      padding: 0.8rem;
+      margin-bottom: 0;
+
+      border-radius: 0.8rem;
+      border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
     }
 
-    .ingredientsTag { 
-        justify-content: space-between;
+    .ingredientsTag {
+      display: flex;
+      justify-content: space-between;
+      gap: 3.2rem;
     }
 
     .price {
-        max-width: 15rem;
+      max-width: 25.1rem;
+      width: 100%;
     }
-
-    @media only screen and (min-width: 768px) {
-
-        h1 {
-            text-align: left;
-        }
-
-        .dishImage {
-            max-width: 22.9rem;
-        }
-
-        .dish {
-            max-width: 85.9rem;
-            width: 100%;
-        }
-
-        > .details {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .ingredients {
-            display: flex;
-            flex-wrap: wrap;
-            align-content: center;
-            
-            width: 100%;
-            max-width: 83.7rem;
-            height: auto;
-            padding: 0.8rem;
-            margin-bottom: 0;
-
-            border-radius: 0.8rem;
-            border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
-        }
-
-        .ingredientsTag { 
-            display: flex;
-            justify-content: space-between;
-            gap: 3.2rem;
-        }
-
-        .price {
-            max-width: 25.1rem;
-            width: 100%;
-        }
-    }
+  }
 `;

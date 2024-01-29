@@ -20,7 +20,6 @@ export function PaymentCard() {
   const { handleResetCart } = useCart();
   const { user } = useAuth();
 
-  // CREDITCARD //
   const [num, setNum] = useState("");
   const [cvc, setCvc] = useState("");
 
@@ -34,7 +33,6 @@ export function PaymentCard() {
     setCvc(event.target.value.slice(0, limit));
   };
 
-  //BUTTONS//
   const [isPixVisible, setIsPixVisible] = useState(false);
   const [isCreditVisible, setIsCreditVisible] = useState(false);
   const [isCartVisible, setIsCartVisible] = useState(true);
@@ -70,11 +68,8 @@ export function PaymentCard() {
     setIsClockActive(true);
     setIsApprovedActive(false);
     setTimeout(() => {
-      // 👇️ Elementos que vão ser alterados
       setIsClockActive(false);
       setIsApprovedActive(true);
-
-      // 👇️ Delay para a alteração
     }, 5000);
   };
 
@@ -178,20 +173,20 @@ export function PaymentCard() {
             <div className="clk">
               <img src={clock} alt="Imagem do QRCode" />
             </div>
-            <p>Aguarde: Estamos processando o seu pagamento</p>
+            <p>Estamos aguardando o pagamento</p>
           </div>
         )}
 
         {isApprovedActive && (
           <div className="approved" id="approved">
             <img src={checkCircle} alt="Imagem de pagamento aprovado" />
-            <p>Oba! Pagamento aprovado! Em breve faremos a entrega!</p>
+            <p>Pagamento aprovado!</p>
           </div>
         )}
 
         <div className="delivered hide" id="delivered">
           <img src={knife} alt="Imagem de uma faca e um garfo" />
-          <p>O pedido foi entregue!</p>
+          <p>Pedido entregue!</p>
         </div>
       </Content>
     </Container>
