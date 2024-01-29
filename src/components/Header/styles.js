@@ -12,8 +12,6 @@ export const Container = styled.header`
     
     justify-content: center;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
-
-    border: 2px solid white;
 `;
 
 export const Content = styled.div`
