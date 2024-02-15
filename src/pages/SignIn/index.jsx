@@ -2,7 +2,7 @@ import { Container, Form, Logo } from "./styles";
 
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../../styles/global";
-import darkTheme from "../../styles/theme";
+import theme from "../../styles/theme";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -22,7 +22,7 @@ export function SignIn() {
   }
 
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Container>
         <Logo>
@@ -71,7 +71,7 @@ export function SignIn() {
             className="btn_login"
           />
 
-          <Link to="/register">Criar conta</Link>
+          <Link to="/register">Criar uma conta</Link>
         </Form>
       </Container>
     </ThemeProvider>

@@ -4,11 +4,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  max-width: 110.6rem;
+  max-width: 1106px;
   height: 100vh;
 
   margin: auto;
-  padding: 14.2rem 4rem;
+  padding: 122px 10px;
 
   justify-content: space-between;
   align-items: center;
@@ -18,7 +18,7 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-    padding: 10rem 1rem;
+    padding: 90px 20px;
   }
 `;
 
@@ -28,26 +28,26 @@ export const Form = styled.form`
   justify-content: center;
   align-items: left;
 
-  max-width: 47.6rem;
+  max-width: 476px;
   width: 100%;
 
-  padding: 6.4rem;
-  border-radius: 1.6rem;
+  padding: 34px 54px;
+  border-radius: 16px;
 
   background-color: ${({ theme }) => theme.COLORS.BLUE_200};
 
   > h2 {
     font-family: "Poppins", sans-serif;
-    font-size: 3.2rem;
+    font-size: 32px;
     font-weight: 500;
-    line-height: 6.8rem;
+    line-height: 68px;
     text-align: center;
 
-    margin-bottom: 3.2rem;
+    margin-bottom: 32px;
   }
 
   > a {
-    margin-top: 3.2rem;
+    margin-top: 32px;
 
     text-align: center;
     color: ${({ theme }) => theme.COLORS.WHITE_100};
@@ -58,17 +58,17 @@ export const Form = styled.form`
   }
 
   > .inputs {
-    margin-bottom: 3.2rem;
+    margin-bottom: 32px;
   }
 
   > .inputs p {
-    font-size: 1.6rem;
-    margin-bottom: 0.8rem;
+    font-size: 16px;
+    margin-bottom: 8px;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
   @media only screen and (max-width: 500px) {
-    padding: 1rem;
+    padding: 10px;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
     h2 {
@@ -81,7 +81,7 @@ export const Logo = styled.div`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.COLORS.BLUE};
-  margin-bottom: 4rem;
+  margin-bottom: 40px;
 
   h1 {
     font-size: clamp(3rem, 3rem + 1.5vw, 4.248rem);
@@ -91,12 +91,12 @@ export const Logo = styled.div`
 
   .logo {
     display: flex;
-    gap: 1.9rem;
+    gap: 19px;
   }
 
   svg {
-    height: 5rem;
-    width: 5rem;
+    height: 50px;
+    width: 50px;
   }
 
   @media only screen and (max-width: 500px) {
@@ -105,12 +105,12 @@ export const Logo = styled.div`
     }
 
     svg {
-      height: 3.5rem;
-      width: 3.5rem;
+      height: 35px;
+      width: 35px;
     }
 
     .logo {
-      gap: 1.2rem;
+      gap: 12px;
     }
   }
 `;

@@ -8,6 +8,8 @@ export default {
     WHITE: "#FFFFFF",
     WHITE_100: "#E1E1E6",
 
+    
+
     BLUE: "#0099ff",
     BLUE_100: "#82F3FF",
     BLUE_200: "#001119",
